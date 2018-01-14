@@ -1,0 +1,233 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>	
+<title>		JiiB - jQuery Parallax Plugin</title>
+<meta name="robots" content="index, follow">
+	<meta charset=utf-8>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="copyright" content="JiiB">
+	<meta name="description" content="This is a jQuery parallax plugin. Examples and a detailed documentation on how to use the plugin can be found on this site. Feel free to download the plugin.">
+	<meta name="language" content="english"> 
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-81646462-2', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+</head>
+<body>
+	<header>
+		<div id="top" class="jumbotron">
+			<div class="container">
+				<h1>Parallax jQuery Plugin</h1>
+				<p id="version">Version 1.0</p>
+				<small>by JiiB</small>
+				<br/><br/>
+
+				<a id="download" class="btn btn-primary btn-lg" onclick="ga('send', 'event', 'downloadlink1zip', 'download1');" href="downloads/jquery.parallax.zip">Download the Plugin!</a><br/>
+
+<!-- 				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<input type="hidden" name="hosted_button_id" value="FF2ABY66TKYWA">
+					<input type="submit" onclick="ga('send', 'event', 'donationbtn', 'donation');" id="donate" class="btn btn-primary" value="support me" name="submit">
+				</form> -->
+			</div>
+		</div>
+		<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+			<li role="presentation"><a href="#top">Home</a></li>
+			<li role="presentation"><a href="#options">Options</a></li>
+			<li role="presentation"><a onclick="ga('send', 'event', 'downloadlink2zip', 'download2');" href="downloads/jquery.parallax.zip">Download</a></li>
+			<li role="presentation"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#105;&#110;&#102;&#111;&#64;&#106;&#105;&#105;&#98;&#46;&#99;&#104;">Contact me</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div id="headerholder"></div>
+	</header>
+	<div class="container">
+		<div class="page-header">
+			<h1>Parallax <small>Demo and explanation</small></h1>
+			<p>Welcome to my page. Here you can find detailed examples and explanation on how to use my parallax jQuery plugin. Feel free to download the plugin and use it on your own projects.</p>
+		</div>
+		<p>Include the <b>jquery.parallax.js</b> file in the <b>&lt;head&gt;</b> section of your HTML file</p>
+		<pre style="background:rgba(238,238,238,0.92);color:#000"><span style="color:#03c">&lt;<span style="font-weight:700">script</span> <span style="color:#36c;font-style:italic">type</span>=<span style="color:#093">"text/javascript"</span> <span style="color:#36c;font-style:italic">src</span>=<span style="color:#093">"jquery.parallax.js"</span>>&lt;/<span style="font-weight:700">script</span>></span>
+</pre>
+		<h3>Here is an example of the parallax.js</h3>
+</div>
+		<section class="parallax-wrapper">
+			<figure class="parallax"></figure>
+		</section>
+	<div class="container">
+
+		<p>Example HTML:</p>
+<pre style="background:rgba(238,238,238,0.92);color:#000">&lt;section class<span style="color:#00f">=</span><span style="color:#093">"parallax-wrapper"</span>>
+    &lt;figure class<span style="color:#00f">=</span><span style="color:#093">"parallax"</span>>&lt;<span style="color:#00f">/</span>figure>
+&lt;<span style="color:#00f">/</span>section>
+
+</pre>
+
+		<br/>
+		<p>Example CSS:</p>
+		<pre style="background:rgba(238,238,238,0.92);color:#000"><span style="color:#36c;font-style:italic">.parallax-wrapper</span>{
+    <span style="color:#33f;font-weight:700">position</span>: <span style="color:#6782d3">relative</span>;
+    <span style="color:#33f;font-weight:700">height</span>: <span style="color:#06f">400<span style="color:#00f">px</span></span>;
+    <span style="color:#33f;font-weight:700">overflow</span>: <span style="color:#6782d3">hidden</span>;
+}
+<span style="color:#36c;font-style:italic">.parallax</span>{
+    <span style="color:#33f;font-weight:700">position</span>: <span style="color:#6782d3">relative</span>;
+    <span style="color:#33f;font-weight:700">background-image</span>: <span style="color:#33f;font-weight:700">url</span>(<span style="font-style:italic">raven.png</span>);
+    <span style="color:#33f;font-weight:700">background</span>-<span style="color:#33f;font-weight:700">size</span>: cover;
+    <span style="color:#33f;font-weight:700">height</span>: <span style="color:#06f">900<span style="color:#00f">px</span></span>;
+    <span style="color:#33f;font-weight:700">top</span>: <span style="color:#06f">-300<span style="color:#00f">px</span></span>;
+    <span style="color:#33f;font-weight:700">left</span>: <span style="color:#06f">8<span style="color:#00f">%</span></span>;
+    <span style="color:#33f;font-weight:700">margin-left</span>: <span style="color:#06f">-300<span style="color:#00f">px</span></span>;
+}
+
+</pre>
+<p>Its important that the picture's height is greater than the visible part in the parallax-wrapper</p><br/>
+
+	<p>Call the the parallax effect:</p>
+<pre style="background:rgba(238,238,238,0.92);color:#000">$(<span style="color:#093">".parallax"</span>).parallax();
+</pre>
+
+
+
+<h3 id="options">Parallax Options</h3>
+<p>Here is a list of all the available options in <b>parallax.js</b></p>
+<h4 id="speed">Speed</h4>
+
+<pre style="background:rgba(238,238,238,0.92);color:#000">speed<span style="color:#00f">:</span> <span style="color:#06f">100</span>
+</pre>
+<p>determine the speed in which the image is moving. Use low numbers for faster speed and high numbers for slower speed<br/>
+<b>default</b> value is <b>100</b></p>
+<div class="half">
+			<section class="parallax-wrapper-2">
+			<figure class="parallax-0"></figure>
+		</section>
+		<p>the image moves faster with a speed of <b>60</b>:</p>
+		<pre style="background:rgba(238,238,238,0.92);color:#000">$("<span style="color:#36c;font-style:italic">.parallax</span>")<span style="color:#36c;font-style:italic">.parallax</span>({
+    speed: <span style="color:#06f">60</span>
+});
+</pre>
+</div>
+<div class="half">
+			<section class="parallax-wrapper-2">
+			<figure class="parallax-1"></figure>
+		</section>
+		<p>the image moves slower with a speed of <b>200</b>:</p>
+		<pre style="background:rgba(238,238,238,0.92);color:#000">$("<span style="color:#36c;font-style:italic">.parallax</span>")<span style="color:#36c;font-style:italic">.parallax</span>({
+    speed: <span style="color:#06f">200</span>
+});
+</pre>
+</div>
+
+<h4 id="Delay">Delay</h4>
+<pre style="background:rgba(238,238,238,0.92);color:#000"><span style="color:#33f;font-weight:700">delay</span>: <span style="color:#06f">1000</span>
+</pre>
+
+<p>determine the delay in milliseconds<br/>
+the <b>default</b> value is <b>1000</b>ms</p>
+<div class="half">
+			<section class="parallax-wrapper-2">
+			<figure class="parallax-2"></figure>
+		</section>
+		<p>the image moves after a 300ms delay:</p>
+		<pre style="background:rgba(238,238,238,0.92);color:#000">$("<span style="color:#36c;font-style:italic">.parallax</span>")<span style="color:#36c;font-style:italic">.parallax</span>({
+    delay: <span style="color:#06f">300</span>
+});
+</pre>
+</div>
+<div class="half">
+			<section class="parallax-wrapper-2">
+			<figure class="parallax-3"></figure>
+		</section>
+		<p>the image moves after a 2000ms delay:</p>
+		<pre style="background:rgba(238,238,238,0.92);color:#000">$("<span style="color:#36c;font-style:italic">.parallax</span>")<span style="color:#36c;font-style:italic">.parallax</span>({
+    delay: <span style="color:#06f">2000</span>
+});
+</pre>
+</div>
+
+<h4 id="Ascending">Ascending</h4>
+<pre style="background:rgba(238,238,238,0.92);color:#000">ascending<span style="color:#00f">:</span> <span style="color:#9700cc">true</span>
+</pre>
+<p>determine the direction in which the image is moving<br/>
+the default <b>value</b> is <b>true</b></p>
+<p><span style="color:#9700cc">true</span> moving from top to bottom</p>
+<p><span style="color:#9700cc">false</span> moving from bottom to top</p>
+<br/>
+<div class="half">
+			<section class="parallax-wrapper-2">
+			<figure class="parallax-4"></figure>
+		</section>
+		<p>image moves towards to the bottom while scolling down:</p>
+		<pre style="background:rgba(238,238,238,0.92);color:#000">$("<span style="color:#36c;font-style:italic">.parallax</span>")<span style="color:#36c;font-style:italic">.parallax</span>({
+    speed: <span style="color:#06f">90</span>,
+    ascending: true,
+    delay: <span style="color:#06f">1000</span>
+});
+</pre>
+</div>
+<div class="half">
+			<section class="parallax-wrapper-2">
+			<figure class="parallax-5"></figure>
+		</section>
+		<p>image moves towards to the top while scolling down:</p>
+		<pre style="background:rgba(238,238,238,0.92);color:#000">$("<span style="color:#36c;font-style:italic">.parallax</span>")<span style="color:#36c;font-style:italic">.parallax</span>({
+    speed: <span style="color:#06f">90</span>,
+    ascending: false,
+    delay: <span style="color:#06f">1000</span>
+});
+</pre>
+</div>
+
+
+	</div>
+	<div class="container">
+	<div class="space"></div>
+</div>
+<footer class="panel-footer">
+<div class="container">
+<h4>Inspiration</h4>
+	the parallax effect on the <a href="http://www.apple.com/chde/macbook/" target="_blank">mac book site</a> inspired me to write this plugin<br/><br/>
+	If you have any questions, please don't hesitate to contact me <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#105;&#110;&#102;&#111;&#64;&#106;&#105;&#105;&#98;&#46;&#99;&#104;">&#105;&#110;&#102;&#111;&#64;&#106;&#105;&#105;&#98;&#46;&#99;&#104;</a>
+</div>
+</footer>
+	<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+	<!-- <script type="text/javascript" src="js/bootstrap.min.js"></script> -->
+	<script type="text/javascript" src="js/jquery.parallax.js"></script>
+	<script>
+		$(window).scroll(function(){
+		var wh = $(this).scrollTop();
+		var hheight = $("header").height()-50;
+
+		if(wh > hheight ){
+			
+$("nav").addClass("fixed");
+$("#headerholder").addClass("hold-this");
+}
+else{
+$("nav").removeClass("fixed");
+$("#headerholder").removeClass("hold-this");
+}
+	});
+	</script>
+</body>
+</html>

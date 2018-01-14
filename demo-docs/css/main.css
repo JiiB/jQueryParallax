@@ -1,0 +1,156 @@
+.parallax-wrapper{
+	position: relative;
+	height: 400px;
+	overflow: hidden;
+	margin: 30px 0 50px 0;
+}
+.parallax{
+	position: relative;
+	background-image: url(../img/blau2.jpg);
+	background-size: cover;
+	height: 1500px;
+	top: -550px;
+	left: 8%;
+	margin-left: -300px;
+}
+.fixed {
+    position: fixed !important;
+    width: 100%;
+    z-index: 99999999;
+    top: 0px;
+    background: white;
+}
+.hold-this {
+	height: 72px;
+	width: 100%;
+	display: block;
+}
+
+.jumbotron{
+	margin-bottom:0 !important; 
+	position: relative;	
+	background-color: transparent !important;
+}
+.jumbotron:after{
+	content: "";
+	background-image: url(../img/clouds.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	opacity: 1;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: -1;  
+}
+#download {
+	margin: 10px 0;
+	/*float: left;*/
+}
+#version {
+	margin-bottom: 0;
+}
+.space{
+	height: 180px;
+}
+
+.half {
+	width: 50%;
+	float: left;
+}
+.half pre {
+	margin-bottom: 30px;
+}
+#donate{
+	margin-left: 10px;
+	top: 20px;
+	position: relative;
+}
+
+.parallax-wrapper-2{
+	position: relative;
+	height: 400px;
+	overflow: hidden;
+	margin: 30px 0 5px 0;
+}
+
+.parallax-0{
+	position: relative;
+	background-image: url(../img/rose.jpg);
+	background-size: cover;
+	height: 900px;
+	top: -600px;
+	left: 8%;
+	margin-left: -300px;
+}
+.parallax-1{
+	position: relative;
+	background-image: url(../img/rose.jpg);
+	background-size: cover;
+	height: 900px;
+	top: -300px;
+	left: 8%;
+	margin-left: -300px;
+}
+
+.parallax-2{
+	position: relative;
+	background-image: url(../img/net.jpg);
+	background-size: cover;
+	height: 900px;
+	top: -500px;
+	left: 8%;
+	margin-left: -300px;
+}
+
+.parallax-3{
+	position: relative;
+	background-image: url(../img/net.jpg);
+	background-size: cover;
+	height: 900px;
+	top: -500px;
+	left: 8%;
+	margin-left: -300px;
+}
+.parallax-4{
+	position: relative;
+	background-image: url(../img/green.jpg);
+	background-size: cover;
+	height: 900px;
+	top: -425px;
+	left: 8%;
+	margin-left: -300px;
+}
+
+.parallax-5{
+	position: relative;
+	background-image: url(../img/green.jpg);
+	background-size: cover;
+	height: 900px;
+	top: 25px;
+	left: 8%;
+	margin-left: -300px;
+}
+
+@media (max-width: 600px){
+	.half{
+		width: 100%;
+	}
+}
+
+@media (max-width: 455px){
+	.jumbotron:after{
+		background-size: cover;
+	}
+}
+
+@media (max-width: 359px){
+	#donate {
+		margin-left: 0px; 
+		top: 0px; 
+	}
+	#download{
+		margin-right: 10px; 
+	}
+}

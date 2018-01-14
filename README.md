@@ -1,2 +1,4 @@
 # jQueryParallax
-jquery parallax plugin from early 2016
+jQuery Parallax plugin from 2016
+
+[Demo Page](https://jiib.ch/jqueryparallax)
