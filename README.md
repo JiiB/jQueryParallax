@@ -1,2 +1,2 @@
 # jQueryParallax
-jquery parallax plugin from early 2016
+jquery parallax plugin from 2016
